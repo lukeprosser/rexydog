@@ -6,114 +6,127 @@
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <meta name="author" content="Luke Prosser">
     <meta name="description" content="Rexy the dog is a Border Terrier from Wales, UK.">
-    <link rel="shortcut icon" href="images/rex-fav.ico">
+    <link rel="shortcut icon" href="rex-fav.ico">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
     <title>RexyDog</title>
   </head>
+
   <body>
-    <!-- Testing GitHub connection with Atom -->
-    <!-- This is another test -->
 
-    <!-- Header & Navigation -->
-    <header class="header-container">
-      <div class="title">
-        <h1>RexyDog</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a class="active" href="#">About Me</a></li>
-          <li><a href="#">Favourite Things</a></li>
-          <li><a href="#">Pictures</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <!-- page wrapper start -->
+    <div id="page">
 
-    <!-- Main Area -->
-    <main>
-      <!-- Section A -->
-      <section id="section-a" class="grid">
-        <div class="box">
+    <!-- header start -->
+      <header>
+        <h1 class="title">RexyDog</h1>
+        <nav>
+          <ul>
+            <li><a class="active" href="#">About Me</a></li>
+            <li><a href="#">Favourite Things</a></li>
+            <li><a href="#">Pictures</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- header end -->
+
+      <!-- main content start -->
+      <main>
+
+        <!-- about start -->
+        <section id="about" class="grid">
+          <div class="box">
+            <div class="content-wrapper">
+              <h2>About Me</h2>
+              <p>Hi, I'm Rex! I'm a Border Terrier from Wales, UK, and this website is all about me!</p>
+              <p>I love to meet new people and it's great to have you here - find out more about me and my <em>rexploits</em> below!</p>
+            </div>
+          </div>
+          <div class="box">
+            <img src="img/rex.jpg" alt="Rex the Dog">
+          </div>
+        </section>
+        <!-- about end -->
+
+        <!-- favourite things start -->
+        <section id="favourite-things" class="grid">
           <div class="content-wrapper">
-            <h2>About Me</h2>
-            <p>Hi, I'm Rex! I'm a Border Terrier from Wales, UK, and this website is all about me!</p>
-            <p>I love to meet new people and it's great to have you here - find out more about me and my <em>rexploits</em> below!</p>
+            <h2>My Favourite Things</h2>
+            <p>These are a few of my favourite things (just in case you want to visit me in person):</p>
           </div>
-        </div>
-        <div class="box">
-          <img src="img/rex.jpg" alt="Rex the Dog">
-        </div>
-      </section>
+          <div class="tile">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+          </div>
+        </section>
+        <!-- favourite things end -->
 
-      <!-- Section B -->
-      <section id="section-b" class="grid">
-        <div class="content-wrapper">
-          <h2>My Favourite Things</h2>
-          <p>These are a few of my favourite things (just in case you want to visit me in person):</p>
-        </div>
-        <div class="tile">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-        </div>
-      </section>
-
-      <!-- Section C -->
-      <section id="section-c" class="grid">
-        <div class="content-wrapper">
-          <h2>Pictures</h2>
-          <p>Here you can view a selection of shots from my modelling portfolio:</p>
-        </div>
-        <div class="gallery">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-          <img src="img/rex-thumb.jpg" alt="">
-        </div>
-      </section>
-
-      <!-- Section D -->
-      <section id="section-d" class="grid">
-        <div class="box">
+        <!-- pictures start -->
+        <section id="pictures" class="grid">
           <div class="content-wrapper">
-            <h2>Contact Me</h2>
-            <p>Unfortunately I can't read, write or use a computer, but you can contact my family here:</p>
+            <h2>Pictures</h2>
+            <p>Here you can view a selection of shots from my modelling portfolio:</p>
           </div>
-        </div>
-        <div class="box">
-          <div class="form-container">
-            <form action="/action_page.php">
-
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Name">
-
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Email">
-
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
-
-              <input type="submit" value="Submit">
-
-            </form>
+          <div class="gallery">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
+            <img src="img/rex-thumb.jpg" alt="">
           </div>
-        </div>
-      </section>
+        </section>
+        <!-- pictures end -->
 
-      <!-- Footer -->
-      <footer class="grid">
-        <div>&copy; RexyDog 2018. All Rights Reserved.</div>
-        <div>Project by <a href="#" target="_blank">CreateDeluxe</a></div>
-      </footer>
-    </main>
+        <!-- contact start -->
+        <section id="contact" class="grid">
+          <div class="box">
+            <div class="content-wrapper">
+              <h2>Contact Me</h2>
+              <p>Unfortunately I can't read, write or use a computer, but you can contact my family here:</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="form-container">
+              <form action="/action_page.php">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- contact end -->
+
+        <!-- footer start -->
+        <footer>
+          <div>&copy; RexyDog 2018. All Rights Reserved.</div>
+          <div>Project by <a href="#" target="_blank">CreateDeluxe</a></div>
+        </footer>
+        <!-- footer end -->
+
+      </main>
+      <!-- main content end -->
+
+    </div>
+    <!-- page wrapper end -->
 
   </body>
+
 </html>
