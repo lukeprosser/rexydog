@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.5em;
   margin: auto;
   background: #F2F2F2;
@@ -17,12 +17,21 @@ body {
 
 img {
   display: block;
+  width: 50%;
+  margin: 1.5em auto;
+  border: 4px solid #00A1C8;
+}
+
+img.pic {
+  display: inline;
   width: 100%;
+  margin: 0;
+  border: none;
 }
 
 h2, h3 {
   margin: 0;
-  padding: 1em 0;
+  padding: 0.5em 0;
 }
 
 p {
@@ -33,66 +42,105 @@ p {
 /* header */
 
 header {
-  display: flex;
-  flex-direction: column;
+  /*display: grid;
+  grid-template-columns: 1fr 1fr;*/
+  justify-content: space-between;
   padding: 2em 0;
-  background-color: #f3d250;
+  background-color: #FAFF00;
 }
 
-.title {
-  margin-left: 5%;
-  letter-spacing: 4px;
-}
-
-nav {
-  margin: 1.5em 0 0 5%;
-}
-
-  nav ul li {
-    display: inline-block;
-    padding: 0 1.5em 0 0;
-    font-size: 1em;
-    letter-spacing: 1px;
+  .title {
+    letter-spacing: 4px;
+    text-align: center;
+    padding-bottom: 1em;
   }
 
-  nav ul li a {
-    text-decoration: none;
-    color: #302529;
+  #border {
+    border: 1px solid #302529;
+    width: 50%;
+    margin: auto;
   }
 
-  li a.active {
-    font-weight: 600;
+  nav {
+    padding-top: 1.5em;
   }
 
-  li a:hover {
-    color: #5da2d5;
-  }
+    nav ul li {
+      display: inline-block;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      width: 100%;
+      text-align: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #302529;
+    }
+
+    li a.active {
+      font-weight: 600;
+    }
+
+    li a:hover {
+      color: #00A1C8;
+    }
 
 /* about */
 
 #about {
   background: #f2f2f2;
+  padding: 2em;
+  text-align: center;
 }
 
 /* favourite things */
 
 #favourite-things {
-  background: #90ccf4;
+  background: #00A1C8;
+  color: #f2f2f2;
+  padding: 2em;
+  text-align: center;
 }
+
+  .tile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+    padding: 1.5em 0;
+  }
 
 /* pictures */
 
 #pictures {
-  background: #f78888;
+  background: #f2f2f2;
+  padding: 2em;
+  text-align: center;
 }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+    padding: 1.5em 0;
+  }
 
 /* contact */
 
 #contact {
-  background: #90ccf4;
+  background: #00A1C8;
+  color: #f2f2f2;
+  padding: 2em;
+  text-align: center;
 }
 
   /* contact form */
+  .form-container {
+    margin: 1em 0;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
 
   /* Style inputs with type="text", select elements and textareas */
   input[type=text], input[type=email], textarea {
@@ -108,7 +156,7 @@ nav {
 
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
-      background-color: #4CAF50;
+      background-color: #00BCA5;
       color: white;
       padding: 12px 20px;
       border: none;
@@ -118,90 +166,23 @@ nav {
 
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
-      background-color: #45a049;
-  }
-
-  /* Add a background color and some padding around the form */
-  .form-container {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
+      background-color: #00AA97;
   }
 
 /* footer */
 
 footer {
-  background: #f3d250;
+  background: #FAFF00;
   padding: 2em;
   text-align: center;
 }
 
-footer a {
-  color: #302529;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #5da2d5;
-}
-
-/* content wrapper */
-
-.content-wrapper {
-  padding-bottom: 2em;
-  text-align: center;
-  padding: 2em 0;
-}
-
-
-/* Desktop */
-@media(min-width: 700px) {
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-    /* Two outside columns 1fr, then repeat an inner column of automatic sizing (max 25em) twice in the middle (total 4 columns). */
+  footer a {
+    color: #302529;
+    font-weight: 600;
+    text-decoration: none;
   }
 
-  .content-wrapper {
-    grid-column: 2/4;
+  footer a:hover {
+    color: #5da2d5;
   }
-}
-
-
-
-
-
-/* NAVIGATION MEDIA QUERY - SCREEN SMALLER THAN 600px */
-
-@media screen and (max-width: 649px) {
-  .header-container {
-    justify-content: space-between;
-  }
-  .title {
-    text-align: center;
-    margin-left: 0;
-  }
-  nav ul li {
-      width: 100%;
-      text-align: center;
-    }
-}
-
-/* NAVIGATION MEDIA QUERY - SCREEN LARGER THAN 600px */
-
-@media screen and (min-width : 650px) {
-    .header-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .title {
-        margin-left: 2em;
-    }
-
-    nav {
-        align-self: center;
-        margin: 0 1em 0 0;
-    }
-}
