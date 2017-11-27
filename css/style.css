@@ -6,20 +6,28 @@
   box-sizing: border-box;
 }
 
+/*#page {
+  max-width: 1000px;
+  margin: auto;
+}*/
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2em;
   line-height: 1.5em;
   margin: auto;
-  background: #F2F2F2;
+  background: #fff;
   color: #302529;
 }
 
 img {
   display: block;
-  width: 50%;
-  margin: 1.5em auto;
-  border: 4px solid #00A1C8;
+  width: 40%;
+  margin: auto;
+}
+
+img#profile {
+  padding-bottom: 1em;
 }
 
 img.pic {
@@ -39,24 +47,46 @@ p {
   padding: 1em 2em;
 }
 
+button {
+    background-color: #43BB46;
+    color: #fff;
+    padding: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button:hover {
+    background-color: #F28F29;
+}
+
 /* header */
 
 header {
-  /*display: grid;
-  grid-template-columns: 1fr 1fr;*/
   justify-content: space-between;
   padding: 2em 0;
-  background-color: #FAFF00;
+  background-color: #43BB46;
 }
 
-  .title {
-    letter-spacing: 4px;
+  .logo {
+    letter-spacing: 1px;
     text-align: center;
     padding-bottom: 1em;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
   }
 
   #border {
-    border: 1px solid #302529;
+    border: 1px solid #fff;
     width: 50%;
     margin: auto;
   }
@@ -67,6 +97,7 @@ header {
 
     nav ul li {
       display: inline-block;
+      list-style: none;
       font-size: 1.2em;
       letter-spacing: 1px;
       width: 100%;
@@ -75,15 +106,16 @@ header {
 
     nav ul li a {
       text-decoration: none;
-      color: #302529;
+      color: #fff;
     }
 
     li a.active {
       font-weight: 600;
+      color: #C1FFC3;
     }
 
     li a:hover {
-      color: #00A1C8;
+      color: #ADDA3C;
     }
 
 /* about */
@@ -94,20 +126,56 @@ header {
   text-align: center;
 }
 
+img#profile {
+  display: block;
+  /*margin: auto;*/
+}
+
 /* favourite things */
 
 #favourite-things {
-  background: #00A1C8;
-  color: #f2f2f2;
+  background: #43b7bb;
+  color: #fff;
   padding: 2em;
   text-align: center;
 }
 
   .tile {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 0.5em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
     padding: 1.5em 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #5aa15c;
+  }
+
+  .tile:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
   }
 
 /* pictures */
@@ -128,8 +196,8 @@ header {
 /* contact */
 
 #contact {
-  background: #00A1C8;
-  color: #f2f2f2;
+  background: #43b7bb;
+  color: #fff;
   padding: 2em;
   text-align: center;
 }
@@ -156,7 +224,7 @@ header {
 
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
-      background-color: #00BCA5;
+      background-color: #43BB46;
       color: white;
       padding: 12px 20px;
       border: none;
@@ -166,23 +234,73 @@ header {
 
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
-      background-color: #00AA97;
+      background-color: #ADDA3C;
   }
+
+/* bottom */
+
+#bottom {
+  background: #f2f2f2;
+  padding: 3em 2em;
+  text-align: center;
+}
 
 /* footer */
 
 footer {
-  background: #FAFF00;
+  background: #43BB46;
+  color: #fff;
   padding: 2em;
   text-align: center;
 }
 
   footer a {
-    color: #302529;
+    color: #fff;
     font-weight: 600;
     text-decoration: none;
   }
 
   footer a:hover {
-    color: #5da2d5;
+    color: #ADDA3C;
   }
+
+/* desktop layout */
+
+@media (min-width: 700px) {
+  header {
+    display: grid;
+    grid-template-columns: auto 65%;
+    padding: 1.2em;
+  }
+  .logo {
+    text-align: left;
+    padding: 0;
+  }
+  nav {
+    text-align: right;
+    padding: 0;
+  }
+  nav ul {
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    vertical-align: middle;
+    font-size: 1em;
+    padding: 0 1%;
+  }
+  #border {
+    display: none;
+  }
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .split {
+    margin: auto;
+  }
+  img#profile {
+    width: 50%;
+    padding-bottom: 0;
+  }
+}
