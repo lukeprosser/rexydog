@@ -54,7 +54,6 @@ p {
     font-size: 0.7em;
     font-weight: 600;
     width: 12em;
-
 }
 
 .btn a {
@@ -153,19 +152,12 @@ img#profile {
 
       .overlay {
         position: absolute;
-        top: 0;
+        top: 85%;
         bottom: 0;
         left: 0;
         right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: #bb4343;
-      }
-
-      .container:hover .overlay {
         opacity: 1;
+        background-color: rgba(0, 0, 0, 0.5);
       }
 
       .text {
@@ -222,23 +214,6 @@ img#profile {
       resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
 
-
-  /*
-  input[type=submit] {
-      background-color: #43BB46;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-  }
-
-
-  input[type=submit]:hover {
-      background-color: #bb4343;
-  }
-  */
-
 /* bottom */
 
 #bottom {
@@ -247,9 +222,9 @@ img#profile {
   text-align: center;
 }
 
-#bottom p {
-  margin-bottom: 1em;
-}
+  #bottom p {
+    margin-bottom: 1em;
+  }
 
 /* footer */
 
@@ -272,47 +247,71 @@ footer {
 
 /* desktop layout */
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   header {
     display: grid;
     grid-template-columns: auto 65%;
     padding: 1.2em;
   }
-  .logo {
-    text-align: left;
-    padding: 0;
-  }
-  nav {
-    text-align: right;
-    padding: 0;
-  }
-  nav ul {
-    padding: 0;
-  }
-  nav ul li {
-    display: inline;
-    vertical-align: middle;
-    font-size: 1em;
-    padding: 0 1%;
-  }
-  #border {
-    display: none;
+    .logo {
+      text-align: left;
+      padding: 0;
+    }
+    nav {
+      text-align: right;
+      padding: 0;
+    }
+    nav ul {
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      vertical-align: middle;
+      font-size: 1em;
+      padding: 0 1%;
+    }
+    #border {
+      display: none;
+    }
+  .split {
+    margin: auto;
   }
   #about {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .split {
-    margin: auto;
-  }
-  img#profile {
-    width: 50%;
-    padding-bottom: 0;
-  }
+    img#profile {
+      width: 50%;
+      padding-bottom: 0;
+    }
   .tile {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1em;
     padding: 1.5em 0;
   }
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .container:hover .overlay {
+      opacity: 1;
+      transition: .5s ease;
+    }
+    .text {
+      color: white;
+      font-size: 1em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
 }
