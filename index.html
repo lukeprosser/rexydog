@@ -20,39 +20,44 @@
     <div id="page">
 
     <!-- header start -->
+    <div id="header-container">
       <header id="top">
-        <div class="logo">
-          <h1>RexyDog <i class="fa fa-paw" aria-hidden="true"></i></h1>
-        </div>
-        <div id="border"></div>
-        <nav>
-          <ul>
-            <li><a class="active" href="#">About Me</a></li>
-            <li><a href="#favourite-things">Favourite Things</a></li>
-            <li><a href="#pictures">Pictures</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+          <div class="logo">
+            <h1>RexyDog <i class="fa fa-paw" aria-hidden="true"></i></h1>
+          </div>
+          <div id="border"></div>
+          <nav>
+            <ul>
+              <li><a class="active" href="#">About Me</a></li>
+              <li><a href="#favourite-things">Favourite Things</a></li>
+              <li><a href="#pictures">Pictures</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
       </header>
+    </div>
       <!-- header end -->
 
       <!-- main content start -->
       <main>
 
         <!-- about start -->
+        <div id="about-container">
         <section id="about">
-          <div class="split">
-            <img id="profile" src="img/rex.jpg" alt="Rex the Dog">
-          </div>
+            <div class="split">
+              <img id="profile" src="img/rex.jpg" alt="Rex the Dog">
+            </div>
           <div class="split">
             <h2>About Me</h2>
             <p>Hi, I'm Rex! I'm a Border Terrier from Wales, UK, and this site is all about me!</p>
             <p>I love to meet new people and it's great to have you here - find out more about me and my 'rexploits' below!</p>
           </div>
         </section>
+        </div>
         <!-- about end -->
 
         <!-- favourite things start -->
+        <div id="favourite-things-container">
         <section id="favourite-things">
           <h2>Favourite Things</h2>
           <p>These are a few of my favourite things (just in case you want to visit me in person):</p>
@@ -131,9 +136,11 @@
             </div>
           </div>
         </section>
+        </div>
         <!-- favourite things end -->
 
         <!-- pictures start -->
+        <div id="pictures-container">
         <section id="pictures">
           <h2>Pictures</h2>
           <p>Here you can view a selection of shots from my modelling portfolio:</p>
@@ -146,43 +153,47 @@
             <img class="pic" src="img/rex-thumb.jpg" alt="">
           </div>
         </section>
+        </div>
         <!-- pictures end -->
 
         <!-- contact start -->
+        <div id="contact-container">
         <section id="contact">
-          <h2>Contact Me</h2>
-          <p>Unfortunately I can't read, write or use a computer, but you can contact my family here:</p>
-          <div class="form-container">
-            <form action="/action_page.php">
-
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Name">
-
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Email">
-
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
-
-              <input class="btn" type="submit" value="Submit">
-
-            </form>
+          <div class="split">
+            <h2>Contact Me</h2>
+            <p>Unfortunately I can't read, write or use a computer...because I'm a dog!</p>
+            <p>However, you can contact my family here:</p>
+          </div>
+          <div class="split">
+            <div class="form-container">
+              <form action="/action_page.php">
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <textarea id="message" name="message" placeholder="Message" style="height:10em"></textarea>
+                <input class="btn" type="submit" value="Submit">
+              </form>
+            </div>
           </div>
         </section>
+        </div>
         <!-- contact end -->
 
-        <!-- bottom start -->
-        <section id="bottom">
+        <!-- back start -->
+        <div id="back-container">
+        <section id="back">
           <p>Thanks for visiting! <i class="fa fa-paw" aria-hidden="true"></i></p>
           <a href="#top"><button class="btn" type="button" name="button">Back to top</button></a>
         </section>
-        <!-- bottom end -->
+        </div>
+        <!-- back end -->
 
         <!-- footer start -->
-        <footer>
+        <div id="footer-container">
+        <footer id="footer">
           <div>&copy; RexyDog 2018. All Rights Reserved.</div>
           <div>Project by <a href="#" target="_blank">CreateDeluxe</a></div>
         </footer>
+        </div>
         <!-- footer end -->
 
       </main>
