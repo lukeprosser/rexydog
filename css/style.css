@@ -23,11 +23,7 @@ body {
 img {
   display: block;
   width: 40%;
-  margin: 0;
-}
-
-img#profile {
-  padding-bottom: 1em;
+  margin: auto;
 }
 
 img.pic {
@@ -47,25 +43,27 @@ p {
   padding: 1em 2em;
 }
 
-button {
-    background-color: #43BB46;
+.btn {
+    background-color: #7dbb43;
     color: #fff;
-    padding: 1em;
+    padding: 1.2em;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     margin: auto;
     font-size: 0.7em;
     font-weight: 600;
+    width: 12em;
+
 }
 
-button a {
+.btn a {
   text-decoration: none;
   color: #fff;
 }
 
-button:hover {
-    background-color: #F28F29;
+.btn:hover {
+    background-color: #bb4343;
 }
 
 /* header */
@@ -128,6 +126,7 @@ header {
 
 img#profile {
   display: block;
+  padding-bottom: 1em;
   /*margin: auto;*/
 }
 
@@ -147,36 +146,37 @@ img#profile {
     padding: 1.5em 0;
   }
 
-  .container {
-    position: relative;
-  }
+    .container {
+      position: relative;
+      line-height: 0;
+    }
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #5aa15c;
-  }
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #bb4343;
+      }
 
-  .tile:hover .overlay {
-    opacity: 1;
-  }
+      .container:hover .overlay {
+        opacity: 1;
+      }
 
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  }
+      .text {
+        color: white;
+        font-size: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
 
 /* pictures */
 
@@ -222,7 +222,8 @@ img#profile {
       resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
 
-  /* Style the submit button with a specific background color etc */
+
+  /*
   input[type=submit] {
       background-color: #43BB46;
       color: white;
@@ -232,10 +233,11 @@ img#profile {
       cursor: pointer;
   }
 
-  /* When moving the mouse over the submit button, add a darker green color */
+
   input[type=submit]:hover {
-      background-color: #ADDA3C;
+      background-color: #bb4343;
   }
+  */
 
 /* bottom */
 
@@ -243,6 +245,10 @@ img#profile {
   background: #f2f2f2;
   padding: 3em 2em;
   text-align: center;
+}
+
+#bottom p {
+  margin-bottom: 1em;
 }
 
 /* footer */
@@ -302,5 +308,11 @@ footer {
   img#profile {
     width: 50%;
     padding-bottom: 0;
+  }
+  .tile {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    padding: 1.5em 0;
   }
 }
