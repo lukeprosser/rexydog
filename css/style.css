@@ -301,6 +301,14 @@ footer {
 
 /* ======================================== */
 
+/* small mobile */
+@media (max-width: 500px) {
+  .text {
+    color: white;
+    font-size: .7em;
+  }
+}
+
 /* desktop layout */
 
 @media (min-width: 800px) {
